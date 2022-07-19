@@ -118,7 +118,7 @@ for ii,pluv_name in enumerate(pluvnames):
 
 sh=data_in.shape[0]
 
-train=int(0.9*sh)
+train=int(0.85*sh)
 
 
 
