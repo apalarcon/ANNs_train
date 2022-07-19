@@ -177,7 +177,7 @@ model.summary()
 # Configure the model and start training
 checkpoint = ModelCheckpoint("MODELS/weights.{epoch:03d}-{val_loss:014.6f}.h5", verbose=1, monitor='val_loss',save_best_only="true", mode='auto')
 model.compile(loss='mean_absolute_error', optimizer='adam', metrics=['accuracy'])
-stats = model.fit(X_train, Y_train, epochs=5000, batch_size=90, verbose=1, validation_split=0.15,callbacks=[checkpoint])
+stats = model.fit(X_train, Y_train, epochs=1000, batch_size=90, verbose=1, validation_split=0.15,callbacks=[checkpoint])
 
 # Test the model after training
 test_results = model.evaluate(X_test, Y_test, verbose=1)
